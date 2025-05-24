@@ -1,6 +1,8 @@
 import React from 'react'
 
-const page = () => {
+//burada calender yerine page olarak biraksak da olur
+
+const calender = () => {
   return (
     <div className='text-2xl text-center mt-5'>
         calendar sayfasi
@@ -8,4 +10,4 @@ const page = () => {
   )
 }
 
-export default page
+export default calender
