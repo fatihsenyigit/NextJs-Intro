@@ -5,7 +5,7 @@ import React from 'react'
 const layout = ({children}) => {
   return (
     <div>
-        <Sidebar></Sidebar>
+        <Sidebar ></Sidebar>
         {children}
     </div>
   )
