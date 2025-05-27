@@ -15,4 +15,11 @@ const UserDetail = ({params}) => {
   )
 }
 
+// userId ile olusan sayfalar dinamik sayfalardir. bunu static hale getirebiliriz generateStaticParam ile
+
+export async function generateStaticParam() {
+    const userArr = [1,2,3,4];
+    return userArr.map((userId)=> ({userId: userId.toString()}))
+}
+
 export default UserDetail

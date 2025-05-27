@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 
+// next.js olmayan route lar deafult 404 sayfasi sunmaktatir. Default 404 sayfasini 'not-found.js' ile override edebiliriz. 
 
 const NotFound = () => {
   const router = useRouter();
