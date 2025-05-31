@@ -21,11 +21,24 @@ const URL = "http://localhost:8080/users";
 //     return data
 // }
 
-// revalidate
+// // revalidate
+// export async function getUsers() {
+//   // automatically revalidate data after a certain amount of time has passed. this is useful for data that changes infrequently and freshness is not as critical.
+//   // to revalidate data at a timed interval, you can use the the next.revalidate option of fetch to set the cache lifetime of a resource(in seconds).
+//   const res = await fetch(URL, { next: { revalidate: 20 } });
+//   if (!res.ok) {
+//     //this will activate the closest error.js Error Boundry
+//     throw new Error("failed to fetch data");
+//   }
+
+//   const data = await res.json();
+//   return data
+// }
+
+// no-store , yani cache mekanizmasini kullanma
 export async function getUsers() {
-  // automatically revalidate data after a certain amount of time has passed. this is useful for data that changes infrequently and freshness is not as critical.
-  // to revalidate data at a timed interval, you can use the the next.revalidate option of fetch to set the cache lifetime of a resource(in seconds).
-  const res = await fetch(URL, { next: { revalidate: 20 } });
+// this will fetch data dynamically, on every request.
+  const res = await fetch(URL, { cache:'no-store' });
   if (!res.ok) {
     //this will activate the closest error.js Error Boundry
     throw new Error("failed to fetch data");
