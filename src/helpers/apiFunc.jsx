@@ -3,7 +3,7 @@
 // const res = await fetch(URL, {cache: 'no-store'}) -- bu cache leme
 // const res = await fetch(URL, {next: {revalidate: '10'}}) -- bu belirlenen saniye cinsinden sure sonunda veriyi tekrar cek
 
-const URL = "http://localhost:8080/userss";
+const URL = "http://localhost:8080/users";
 
 // // force-cache
 // export async function getUsers() {
